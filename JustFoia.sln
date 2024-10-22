@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustFoia", "JustFoia.csproj", "{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F2C4627-1A31-43E8-ABE9-F692EF3A863F}
+	EndGlobalSection
+EndGlobal

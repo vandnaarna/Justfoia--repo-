@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\vandana\\JustFoia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|c:\\vandana\\justfoia\\page\\pageone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|solutionrelative:page\\pageone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|c:\\vandana\\justfoia\\test\\testone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|solutionrelative:test\\testone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|c:\\vandana\\justfoia\\locator\\locatorone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|solutionrelative:locator\\locatorone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|c:\\vandana\\justfoia\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|c:\\vandana\\justfoia\\justfoia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EA09E0B0-A2A0-454B-BBE9-AD055A3A0CFF}|JustFoia.csproj|solutionrelative:justfoia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocatorOne.cs",
+              "DocumentMoniker": "C:\\vandana\\JustFoia\\Locator\\LocatorOne.cs",
+              "RelativeDocumentMoniker": "Locator\\LocatorOne.cs",
+              "ToolTip": "C:\\vandana\\JustFoia\\Locator\\LocatorOne.cs",
+              "RelativeToolTip": "Locator\\LocatorOne.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T05:54:32.054Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageOne.cs",
+              "DocumentMoniker": "C:\\vandana\\JustFoia\\Page\\PageOne.cs",
+              "RelativeDocumentMoniker": "Page\\PageOne.cs",
+              "ToolTip": "C:\\vandana\\JustFoia\\Page\\PageOne.cs",
+              "RelativeToolTip": "Page\\PageOne.cs",
+              "ViewState": "AgIAABwBAAAAAAAAAAAQwCgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T06:32:02.505Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestOne.cs",
+              "DocumentMoniker": "C:\\vandana\\JustFoia\\Test\\TestOne.cs",
+              "RelativeDocumentMoniker": "Test\\TestOne.cs",
+              "ToolTip": "C:\\vandana\\JustFoia\\Test\\TestOne.cs",
+              "RelativeToolTip": "Test\\TestOne.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T10:36:00.539Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\vandana\\JustFoia\\Class1.cs",
+              "RelativeDocumentMoniker": "Class1.cs",
+              "ToolTip": "C:\\vandana\\JustFoia\\Class1.cs",
+              "RelativeToolTip": "Class1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T11:11:15.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JustFoia.csproj",
+              "DocumentMoniker": "C:\\vandana\\JustFoia\\JustFoia.csproj",
+              "RelativeDocumentMoniker": "JustFoia.csproj",
+              "ToolTip": "C:\\vandana\\JustFoia\\JustFoia.csproj",
+              "RelativeToolTip": "JustFoia.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-18T07:40:53.118Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
