@@ -32,6 +32,7 @@ namespace JustFoia.Page
             await _loc.getlabel("Description").FillAsync(description);
             await _loc.Ariabutton("Save").ClickAsync();
             await _loc.label("Request list").ClickAsync();
+            //Add new request
             await _loc.Ariabutton("Add New").ClickAsync();
             await _loc.Arialink("Public Records Request").First.ClickAsync();
             await _loc.placehold("John Doe").ClickAsync();
