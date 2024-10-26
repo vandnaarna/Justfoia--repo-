@@ -11,17 +11,16 @@ namespace JustFoia.Test
 {
     public class Test9 : PageTest
     {
-
         private Page9? page9;
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             page9 = new Page9(Page);
         }
         [Test]
         public async Task Case9()
         {
-            await page9!.Verifythattagscanbeappliedtorequest();
+            await page9!.VerifyThatTagsCanBeAppliedToRequestAsync();
         }
     }
 }

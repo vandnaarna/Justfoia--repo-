@@ -8,14 +8,14 @@ namespace JustFoia.Test
     {
         private Page3? page3;
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             page3 = new Page3(Page);
         }
         [Test]
         public async Task Case3()
         {
-            await page3!.VerifyHolidaycanbeEditedAsync();
+            await page3!.VerifyHolidayCanBeEditedAsync();
         }
     }
 }

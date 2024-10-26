@@ -15,7 +15,7 @@ namespace JustFoia.Test
         [Test]
         public async Task Case10()
         {
-            await _page10!.VerifythattagscanbearchivedAsync();
+            await _page10!.VerifyThatTagsCanBeArchivedAsync();
         }
     }
 }
