@@ -7,41 +7,41 @@ namespace JustFoia.Page
 {
     public class Page11
     {
-        private Locator11 _loc;
-        private IPage _page;
-        private Login _login;
+        private readonly Locator11 _locator11;
+        private  readonly IPage _page;
+        private  readonly Login _login;
         public Page11(IPage page)
         {
             _page = page;
-            _loc = new Locator11(_page);
+            _locator11 = new Locator11(_page);
             _login = new Login(_page);
         }
         //Verify Tags can be Deleted
-        public async Task VerifyTagscanbeDeleted()
+        public async Task VerifyTagsCanBeDeletedAsync()
         {
             await _login.DoLogin();
-            await _loc.label("Profile options").ClickAsync();
-            await _loc.Arianewlink("Tags").ClickAsync();
+            await _locator11.Label("Profile options").ClickAsync();
+            await _locator11.AriaNewLink("Tags").ClickAsync();
             //Create new tag
-            await _loc.Ariabutton("Add New").ClickAsync();
-            await _loc.label("Keywords *").ClickAsync();
+            await _locator11.AriaButton("Add New").ClickAsync();
+            await _locator11.Label("Keywords *").ClickAsync();
             DateTime dateTime = DateTime.Now;
-            string tagname = "Tagtest" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
-            await _loc.label("Keywords *").FillAsync(tagname);
-            await _loc.getlabel("Description").ClickAsync();
-            string description = "Tagtestdescription" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
-            await _loc.getlabel("Description").FillAsync(description);
-            await _loc.Ariabutton("Save").ClickAsync();
-            //Archive locator
-            await _loc.Ariarow(tagname).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
-            await _loc.Ariabutton("Yes").ClickAsync();
+            string tagName = "TagTest" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
+            await _locator11.Label("Keywords *").FillAsync(tagName);
+            await _locator11.GetLabelNew("Description").ClickAsync();
+            string description = "TagTestDescription" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
+            await _locator11.GetLabelNew("Description").FillAsync(description);
+            await _locator11.AriaButton("Save").ClickAsync();
+            //Archive Label
+            await _locator11.AriaRow(tagName).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
+            await _locator11.AriaButton("Yes").ClickAsync();
             await _page.Locator("nav").Filter(new() { HasText = "Filter" }).GetByRole(AriaRole.Button).ClickAsync();
             await _page.Locator(".v-input--selection-controls__ripple").ClickAsync();
-            //Delete locator
-            await _loc.Ariarow(tagname).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
-            await _loc.Ariabutton("No").ClickAsync();
-            await _loc.Ariarow(tagname).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
-            await _loc.Ariabutton("Yes").ClickAsync();
+            //Delete Label
+            await _locator11.AriaRow(tagName).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
+            await _locator11.AriaButton("No").ClickAsync();
+            await _locator11.AriaRow(tagName).GetByRole(AriaRole.Button).Nth(1).ClickAsync();
+            await _locator11.AriaButton("Yes").ClickAsync();
             await Expect(_page.GetByText("Tag deleted!")).ToBeVisibleAsync();
         }
     }

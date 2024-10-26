@@ -6,37 +6,37 @@ namespace JustFoia.Page
 {
     public class Page8
     {
-        private Locator8 _loc;
-        private IPage _page;
-        private Login _login;
+        private readonly Locator8 _locator8;
+        private readonly IPage _page;
+        private readonly Login _login;
         public Page8(IPage page)
         {
             _page = page;
             _login = new Login(_page);
-            _loc = new Locator8(_page);
+            _locator8 = new Locator8(_page);
         }
         //Verify that tags can be edited
-        public async Task VerifythattagscanbeeditedAsync()
+        public async Task VerifyThatTagsCanBeEditedAsync()
         {
             await _login.DoLogin();
-            await _loc.label("Profile options").ClickAsync();
-            await _loc.Arialink("Tags").ClickAsync();
-            await _loc.Ariabutton("Add New").ClickAsync();
-            await _loc.label("Keywords *").ClickAsync();
+            await _locator8.Label("Profile options").ClickAsync();
+            await _locator8.AriaLinkNew("Tags").ClickAsync();
+            await _locator8.AriaButton("Add New").ClickAsync();
+            await _locator8.Label("Keywords *").ClickAsync();
             DateTime dateTime = DateTime.Now;
-            string tagname = "Tagtest" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
-            await _loc.label("Keywords *").FillAsync(tagname);
-            await _loc.getlabel("Description").ClickAsync();
-            string description = "Tagtestdescription" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
-            await _loc.getlabel("Description").FillAsync(description);
-            await _loc.Ariabutton("Save").ClickAsync();
-            //Edit locator
-            await _page.GetByRole(AriaRole.Row, new() { Name = tagname }).GetByRole(AriaRole.Button).First.ClickAsync();
-            await _loc.label("Keywords *").ClickAsync();
-            await _loc.label("Keywords *").FillAsync(tagname);
-            await _loc.getlabel("Description").ClickAsync();
-            await _loc.getlabel("Description").FillAsync(description);
-            await _loc.Ariabutton("Save").ClickAsync();
+            string tagName = "TagTest" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
+            await _locator8.Label("Keywords *").FillAsync(tagName);
+            await _locator8.GetLabelNew("Description").ClickAsync();
+            string description = "TagTestDescription" + dateTime.ToString().Replace(":", "").Replace("/", "").Replace(" ", "");
+            await _locator8.GetLabelNew("Description").FillAsync(description);
+            await _locator8.AriaButton("Save").ClickAsync();
+            //Edit Label
+            await _page.GetByRole(AriaRole.Row, new() { Name = tagName }).GetByRole(AriaRole.Button).First.ClickAsync();
+            await _locator8.Label("Keywords *").ClickAsync();
+            await _locator8.Label("Keywords *").FillAsync(tagName);
+            await _locator8.GetLabelNew("Description").ClickAsync();
+            await _locator8.GetLabelNew("Description").FillAsync(description);
+            await _locator8.AriaButton("Save").ClickAsync();
             await Expect(_page.GetByText("Tag updated!")).ToBeVisibleAsync();
         }
     }

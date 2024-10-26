@@ -7,46 +7,46 @@ namespace JustFoia.Page
 {
     public class Page4
     {
-        private Locator4 _loc;
-        private IPage _page;
-        private Login _login;
+        private  readonly Locator4 _locator4;
+        private  readonly IPage _page;
+        private readonly Login _login;
         public Page4(IPage page)
         {
             _page = page;
-            _loc = new Locator4(_page);
+            _locator4 = new Locator4(_page);
             _login = new Login(_page);
         }
         //Verify Holiday can be Archived
-        public async Task VerifyHolidaycanbeArchivedAsync()
+        public async Task VerifyHolidayCanBeArchivedAsync()
         {
             await _login.DoLogin();
             await _page.Locator("#main-content").GetByText("arrow_drop_down").ClickAsync();
             await _page.Locator("a").Filter(new() { HasText = "All" }).ClickAsync();
-            await _loc.locator2("Profile options").ClickAsync();
-            await _loc.locator4("Holidays").ClickAsync();
-            await _loc.locator3("Add New").ClickAsync();
-            await _loc.locator2("Holiday Name").ClickAsync();
+            await _locator4.Label("Profile options").ClickAsync();
+            await _locator4.AriaLink("Holidays").ClickAsync();
+            await _locator4.AriaButton("Add New").ClickAsync();
+            await _locator4.Label("Holiday Name").ClickAsync();
             DateTime dateTime = DateTime.Now;
             string holidayName = "TestHoliday" + dateTime.ToString().Replace(":", "").Replace(" ", "").Replace("/", "");
-            await _loc.locator2("Holiday Name").FillAsync(holidayName);
-            await _loc.locator2("Holiday Date").ClickAsync();
+            await _locator4.Label("Holiday Name").FillAsync(holidayName);
+            await _locator4.Label("Holiday Date").ClickAsync();
             Random random = new Random();
             int day = random.Next(1, 30);
             int month = random.Next(1, 12);
             for (int i = 0; i < month; i++)
             {
-                await _loc.locator5("chevron_left").First.ClickAsync();
+                await _locator4.LocatorFilter("chevron_left").First.ClickAsync();
             }
             await _page.GetByRole(AriaRole.Button, new() { Name = day.ToString(), Exact = true }).First.ClickAsync();
-            await _loc.locator3("OK").ClickAsync();
-            await _loc.locator3("Save").ClickAsync();
-            await _loc.locator2("Filter").ClickAsync();
-            await _loc.locator2("Filter").FillAsync(holidayName);
-            await _loc.locator2("Filter").PressAsync("Enter");
-            await _loc.locator5("archive").ClickAsync();
-            await _loc.locator3("No").ClickAsync();
-            await _loc.locator5("archive").ClickAsync();
-            await _loc.locator3("Yes").ClickAsync();
+            await _locator4.AriaButton("OK").ClickAsync();
+            await _locator4.AriaButton("Save").ClickAsync();
+            await _locator4.Label("Filter").ClickAsync();
+            await _locator4.Label("Filter").FillAsync(holidayName);
+            await _locator4.Label("Filter").PressAsync("Enter");
+            await _locator4.LocatorFilter("archive").ClickAsync();
+            await _locator4.AriaButton("No").ClickAsync();
+            await _locator4.LocatorFilter("archive").ClickAsync();
+            await _locator4.AriaButton("Yes").ClickAsync();
             await Expect(_page.GetByText("×Holiday deleted!")).ToBeVisibleAsync();
         }
     }
