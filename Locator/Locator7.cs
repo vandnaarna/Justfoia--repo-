@@ -4,14 +4,14 @@ namespace JustFoia.Locator
 {
     public class Locator7
     {
-        private  IPage page7;
+        private readonly IPage _page;
         public Locator7(IPage page)
-        { 
-            page7 = page;   
+        {
+            _page = page;
         }
-        public ILocator label(string name) => page7.GetByLabel(name);
-        public ILocator Arianewlink(string link) => page7.GetByRole(AriaRole.Link, new() { Name = link});
-        public ILocator Ariabutton(string button) => page7.GetByRole(AriaRole.Button, new() { Name = button });
-        public ILocator getlabel(string desc) => page7.GetByLabel(desc, new() { Exact = true });
+        public ILocator Label(string name) => _page.GetByLabel(name);
+        public ILocator AriaNewLink(string link) => _page.GetByRole(AriaRole.Link, new() { Name = link });
+        public ILocator AriaButton(string button) => _page.GetByRole(AriaRole.Button, new() { Name = button });
+        public ILocator GetLabelNew(string desc) => _page.GetByLabel(desc, new() { Exact = true });
     }
 }

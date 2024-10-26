@@ -6,18 +6,15 @@ namespace JustFoia.Locator
 {
     public class Locator6
     {
-        private readonly IPage page6;
+        private readonly IPage _page;
         public Locator6(IPage page)
         {
-            page6 = page;
+            _page = page;
         }
-        public ILocator locator(string name) => page6.GetByRole(AriaRole.Cell, new()
-        { Name = name });
-        public ILocator locator2(string name) => page6.GetByLabel(name);
-        public ILocator locator3(string log) => page6.GetByRole(AriaRole.Button, new() { Name = log });
-        public ILocator locator5(string button) => page6.Locator("button").Filter(new() { HasText = button });
-        public ILocator locator4(string local) => page6.GetByRole(AriaRole.Link, new() { Name = local });
-
+        public ILocator GetByRoleAriaCell(string name) => _page.GetByRole(AriaRole.Cell,new(){ Name = name });
+        public ILocator Label(string name) => _page.GetByLabel(name);
+        public ILocator AriaButton(string log) => _page.GetByRole(AriaRole.Button,new(){ Name = log });
+        public ILocator ButtonFilter(string button) => _page.Locator("button").Filter(new(){ HasText = button });
+        public ILocator AriaLink(string local) => _page.GetByRole(AriaRole.Link, new(){ Name = local });
     }
-
 }
